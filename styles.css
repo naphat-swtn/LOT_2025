@@ -229,3 +229,30 @@ body.has-fixed-header{ padding-top: var(--header-height, 76px); }
   .emblem-grid{ align-items: stretch; } /* ให้แถวสูงตามคอนเทนต์ที่สูงสุด */
   .emblem-art{ align-self: center; }    /* กึ่งกลางคอลัมน์ซ้ายในแนวตั้ง */
 }
+/* === Tweaks from latest request === */
+
+/* 1) Nudge the two right-side decorative circles up a bit on the Hero.
+   Assuming .decor-2 and .decor-4 are the right-hand circles.
+   Using margin-top so we don't clobber any existing transform. */
+.hero .decor-2,
+.hero .decor-4 {
+  margin-top: -14px; /* adjust amount if needed: -10px to -20px */
+}
+
+/* 2) About section: center text on mobile */
+@media (max-width: 640px) {
+  /* Center the text content */
+  .about .about-content {
+    text-align: center;
+  }
+  .about .about-title,
+  .about .about-detail {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* If the About layout uses CSS Grid, center items horizontally too */
+  .about .about-grid {
+    justify-items: center;
+  }
+}
