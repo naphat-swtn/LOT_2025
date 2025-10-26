@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="th" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>การสมัคร | LOT2025</title>
+    <meta name="description" content="คุณสมบัติผู้เข้าสอบและรายละเอียดการสมัครเข้าร่วมการแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ (LOT)" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="การสมัคร | LOT2025" />
+    <meta property="og:description" content="คุณสมบัติผู้เข้าสอบและรายละเอียดการสมัคร LOT" />
+    <meta property="og:image" content="assets/images/og-image.png" />
+    <meta property="og:image:alt" content="LOT 2025" />
+
+    <link rel="icon" href="assets/images/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Global styles (Design System) -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Page-only styles -->
+    <style>
+      /* Sticky footer layout */
+      html, body { height: 100%; }
+      body.page-flex { min-height: 100dvh; display: flex; flex-direction: column; }
+      main { flex: 1 0 auto; }
+      .site-footer { margin-top: auto; }
+
+      /* Sticky nav (defensive) */
+      .site-header{ position: sticky; top: 0; z-index: 9999; background: var(--color-nav-bg,#fafafa); }
+
+      /* Breadcrumb + title */
+      :root { --crumb-sep: rgba(44,44,44,.35); }
+      .page-head { padding-block: clamp(24px, 4.6vw, 40px) clamp(8px, 2.2vw, 16px); }
+      .breadcrumb { margin: 0 0 clamp(10px, 2vw, 14px); color: var(--color-text); font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem); }
+      .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; align-items: baseline; flex-wrap: wrap; }
+      .breadcrumb li { display: inline-flex; align-items: baseline; }
+      .breadcrumb li + li::before { content: "/"; color: var(--crumb-sep); margin: 0 8px; }
+      .breadcrumb a { color: #2c2c2c; text-decoration: none; }
+      .breadcrumb a:hover, .breadcrumb a:focus-visible { color: #4c4c9f; }
+      .page-title { margin: 0; }
+
+      /* Section: คุณสมบัติผู้เข้าสอบ */
+      .eligibility { padding-block: clamp(12px, 4vw, 36px) clamp(28px, 5vw, 44px); }
+      .elig-title { margin: 0 0 clamp(14px, 2.4vw, 18px); }
+
+      .elig-list { list-style: none; margin: 0; padding: 0; display: grid; row-gap: clamp(16px, 2.4vw, 22px); }
+
+      /* Numbers vertically centered vs detail height */
+      .elig-row {
+        display: grid;
+        grid-template-columns: 64px auto;
+        column-gap: clamp(14px, 2vw, 20px);
+        align-items: stretch;
+      }
+      .elig-badge {
+        width: 56px; height: 56px;
+        display: grid; place-items: center;
+        border-radius: 50%;
+        background: #4c4c9f; color: #fff;
+        font-weight: 700; font-size: 1.15rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        user-select: none;
+        align-self: center;   /* center vertically */
+      }
+      .elig-body {
+        color: var(--color-text);
+        line-height: 1.8;
+        font-size: clamp(1rem, 0.98rem + 0.2vw, 1.08rem);
+        align-self: start;
+      }
+      .elig-body strong { font-weight: 700; }
+      @media (max-width: 640px){
+        .elig-row { grid-template-columns: 48px auto; }
+        .elig-badge { width: 44px; height: 44px; font-size: 1rem; }
+      }
+
+      /* Schedule timeline (reuse index timeline structure, recolor) */
+      .schedule { padding-block: clamp(8px, 3.6vw, 18px) clamp(44px, 7vw, 72px); }
+      /* Increased space below heading */
+      .schedule-title { margin: 0 0 clamp(22px, 3.8vw, 32px); }
+
+      .vtl { position: relative; --date-col: 140px; --gap: clamp(10px, 2vw, 18px); margin-top: clamp(8px, 2.6vw, 20px); }
+      .vtl-list { list-style: none; margin: 0; padding: 0; display: grid; row-gap: clamp(14px, 2.4vw, 18px); }
+      .vtl-row {
+        display: grid;
+        grid-template-columns: var(--date-col) 40px 1fr;
+        align-items: center;
+        column-gap: var(--gap);
+        position: relative;
+      }
+      .vtl-date { color: #5d6470; font-weight: 600; }
+
+      .vtl-dot {
+        width: 22px; height: 22px; border-radius: 50%;
+        background: #b9b6f0;
+        display: grid; place-items: center;
+        outline: 4px solid #ecebfb;
+        box-shadow: 0 1px 4px rgba(0,0,0,.06);
+        position: relative;
+        z-index: 1;
+        justify-self: center; /* center inside its column */
+      }
+      .vtl-dot img { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; }
+      .vtl-dot--globe img { width: 18px; height: 18px; object-fit: contain; border-radius: 0; }
+
+      .vtl-card {
+        background: #e7e6fb;
+        border-radius: 14px;
+        padding: clamp(10px, 1.4vw, 12px) clamp(12px, 1.8vw, 16px);
+        color: #2c2c2c;
+        box-shadow: 0 2px 10px rgba(76,76,159,.08);
+      }
+      .vtl-card a { color: #4c4c9f; font-weight: 600; text-decoration: none; }
+      /* Hover only color change, no underline */
+      .vtl-card a:hover, .vtl-card a:focus-visible { color: #7d6de0; text-decoration: none; }
+
+      /* Vertical line: centered in the 40px dot column (6px wide), NO arrow head */
+      .vtl::before{
+        content:"";
+        position:absolute;
+        left: calc(var(--date-col) + var(--gap) + 20px - 3px); /* 20px center - 3px half width */
+        top: var(--line-top, 10px);
+        height: var(--line-height, 100%);
+        width: 6px;
+        border-radius: 6px;
+        background: #c3bff7;
+      }
+      /* Remove arrow head explicitly */
+      .vtl::after{ display: none !important; content: none !important; }
+
+      .schedule-cta { display: grid; place-items: center; margin-top: clamp(24px, 5vw, 48px); }
+
+      /* Force the CTA text to be two lines */
+      .schedule-cta .news-btn {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+      .schedule-cta .news-btn .btn-line { display: block; }
+      
+      @media (max-width: 860px){
+        .vtl { --date-col: 110px; }
+      }
+      @media (max-width: 560px){
+        .vtl { --date-col: 92px; }
+        .vtl-date { font-size: .95rem; }
+      }
+    </style>
+  </head>
+  <body class="page-flex">
+    <a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>
+
+    <!-- Sticky Navbar -->
+    <header class="site-header" role="banner">
+      <div class="container nav-container">
+        <a href="index.html" class="brand" aria-label="ไปยังหน้าแรก">
+          <img class="brand-logo" src="assets/images/LOT_LOGO_Grey_Resize.png" alt="LOT ภาษาศาสตร์โอลิมปิก" width="120" height="48" />
+        </a>
+
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="เปิดเมนู">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="เมนูหลัก">
+          <ul class="nav-list">
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="Announcement.html">ประกาศ</a></li>
+            <li><a aria-current="page" href="Registration.html">การสมัคร</a></li>
+            <li><a href="About_LOT.html">เกี่ยวกับการแข่งขัน</a></li>
+            <li><a href="Exam.html">คลังข้อสอบ</a></li>
+            <li><a href="Contact.html">ติดต่อ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Page header -->
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">หน้าหลัก</a></li>
+              <li aria-current="page">การสมัคร</li>
+            </ol>
+          </nav>
+          <h1 class="announce-head page-title">คุณสมบัติผู้เข้าสอบ</h1>
+        </div>
+      </section>
+
+      <!-- Eligibility section -->
+      <section class="eligibility">
+        <div class="container">
+          <ul class="elig-list">
+            <li class="elig-row">
+              <div class="elig-badge">1</div>
+              <div class="elig-body">
+                ผู้เข้าสอบภาษาศาสตร์โอลิมปิกระดับชาติต้องเป็น <strong>ผู้ที่กำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาตอนปลายหรือเทียบเท่าจากสถานศึกษาในประเทศไทย</strong>
+                หรือเป็น <strong>ผู้สำเร็จการศึกษาชั้นมัธยมศึกษาปีที่ 6 จากสถานศึกษาในประเทศไทย หรือมีวุฒิเทียบเท่า</strong> เช่น วุฒิสอบเทียบ GED
+                (General Education Development) หรือวุฒิจากระบบการศึกษาโดยครอบครัว (Home School) ในปีการศึกษาที่เข้าแข่งขัน
+                และยังไม่เข้าศึกษาต่อในระดับอุดมศึกษา กรณีเป็นผู้ที่กำลังศึกษาหรือสำเร็จการศึกษาจากโรงเรียนนานาชาติ ต้องมีหลักฐาน
+                แสดงว่าได้พำนักอยู่ในประเทศไทยมาอย่างน้อย 6 เดือน ก่อนวันสอบแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ
+                และจะพำนักอยู่ในประเทศไทยจนสิ้นสุดการแข่งขันภาษาศาสตร์โอลิมปิกระหว่างประเทศในปีนั้น
+              </div>
+            </li>
+
+            <li class="elig-row">
+              <div class="elig-badge">2</div>
+              <div class="elig-body">
+                ผู้เข้าสอบภาษาศาสตร์โอลิมปิกระดับชาติต้องมีอายุ <strong>ไม่เกิน 20 ปีบริบูรณ์ ณ วันที่ 30 มิถุนายน</strong><br/>
+                ของปีที่จะเข้าแข่งขันภาษาศาสตร์โอลิมปิกระหว่างประเทศ
+              </div>
+            </li>
+
+            <li class="elig-row">
+              <div class="elig-badge">3</div>
+              <div class="elig-body">
+                ผู้เข้าสอบภาษาศาสตร์โอลิมปิกระดับชาติต้อง <strong>ไม่เคยเป็นผู้แทนประเทศไทย</strong>
+                ในการแข่งขันภาษาศาสตร์โอลิมปิก<br/>ระหว่างประเทศ <strong>มาแล้ว 3 ครั้ง</strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Schedule timeline -->
+      <section class="schedule" aria-labelledby="schedule-title">
+        <div class="container">
+          <h2 id="schedule-title" class="announce-head schedule-title">
+            กำหนดการแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ ครั้งที่ 6
+          </h2>
+
+          <div class="vtl vtl--reg" data-reveal>
+            <ul class="vtl-list">
+              <li class="vtl-row">
+                <div class="vtl-date">3 พฤศจิกายน - 5 ธันวาคม 68</div>
+                <div class="vtl-dot" aria-hidden="true"></div>
+                <div class="vtl-card">
+                  รับสมัครผู้เข้าร่วมการแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ ครั้งที่ 6
+                  (ระบบจะเปิดรับสมัครเวลา 8.30 น. และจะปิดเวลา 16.30 น.)
+                  <a href="https://human.msu.ac.th/international-linguistics-olympiad-2026/?fbclid=IwY2xjawNfUnNleHRuA2FlbQIxMABicmlkETFybGliN1h2QWZtb3R3YXBHAR4Wtjqb7KmCuf8OZ9B-ppZqicSFK38leZs2-8R7ey7eoqNDCWbfdhMUuDQcwQ_aem_JbCLNIi3j1de6oQ_Qt5lEg" class="vtl-link">คลิกที่นี่</a>
+                </div>
+              </li>
+
+              <li class="vtl-row">
+                <div class="vtl-date">26 ธันวาคม 68</div>
+                <div class="vtl-dot" aria-hidden="true"></div>
+                <div class="vtl-card">
+                  ประกาศรายชื่อผู้มีสิทธิ์สอบ ทางเว็บไซต์ มูลนิธิ สอวน. <a href="https://www.posn.or.th" target="_blank" rel="noopener">https://www.posn.or.th/</a>
+                </div>
+              </li>
+
+              <li class="vtl-row">
+                <div class="vtl-date">18 มกราคม 69</div>
+                <div class="vtl-dot"><img src="assets/images/icons/flag-th.png" alt="" loading="lazy" /></div>
+                <div class="vtl-card">
+                  การแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ ครั้งที่ 6 ณ สถานที่สอบตามที่ผู้สมัครเลือกไว้ในใบสมัคร
+                  (การเข้าสอบเวลา 13.00 - 15.00 น.)
+                </div>
+              </li>
+
+              <li class="vtl-row">
+                <div class="vtl-date">13 กุมภาพันธ์ 69</div>
+                <div class="vtl-dot" aria-hidden="true"></div>
+                <div class="vtl-card">
+                  ประกาศรายชื่อผู้ผ่านการสอบและมีสิทธิ์เข้าร่วมการอบรมความรู้และทักษะเชิงวิเคราะห์ทางภาษาศาสตร์
+                  ทางเว็บไซต์ มูลนิธิ สอวน. <a href="https://www.posn.or.th" target="_blank" rel="noopener">https://www.posn.or.th/</a>
+                </div>
+              </li>
+
+              <li class="vtl-row">
+                <div class="vtl-date">23 - 27 มีนาคม 69</div>
+                <div class="vtl-dot" aria-hidden="true"></div>
+                <div class="vtl-card">
+                  การอบรมความรู้และทักษะเชิงวิเคราะห์ทางภาษาศาสตร์ ในรูปแบบ onsite
+                </div>
+              </li>
+
+              <li class="vtl-row">
+                <div class="vtl-date">29 มีนาคม 69</div>
+                <div class="vtl-dot vtl-dot--globe"><img src="assets/images/icons/earth.png" alt="" loading="lazy" /></div>
+                <div class="vtl-card">
+                  การแข่งขันภาษาศาสตร์โอลิมปิกเอเชียแปซิฟิก ครั้งที่ 8 ที่คณะอักษรศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+                </div>
+              </li>
+
+              <li class="vtl-row">
+                <div class="vtl-date">พฤษภาคม 69</div>
+                <div class="vtl-dot vtl-dot--globe"><img src="assets/images/icons/earth.png" alt="" loading="lazy" /></div>
+                <div class="vtl-card">
+                  ประกาศรายชื่อผู้แทนประเทศไทยไปแข่งขันภาษาศาสตร์โอลิมปิกระหว่างประเทศ ครั้งที่ 23
+                  ทางเว็บไซต์ มูลนิธิ สอวน. <a href="https://www.posn.or.th" target="_blank" rel="noopener">https://www.posn.or.th/</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="schedule-cta">
+            <a href="https://human.msu.ac.th/international-linguistics-olympiad-2026/?fbclid=IwY2xjawNfUnNleHRuA2FlbQIxMABicmlkETFybGliN1h2QWZtb3R3YXBHAR4Wtjqb7KmCuf8OZ9B-ppZqicSFK38leZs2-8R7ey7eoqNDCWbfdhMUuDQcwQ_aem_JbCLNIi3j1de6oQ_Qt5lEg" class="news-btn">
+              <span class="btn-line">คลิกเพื่อสมัครการแข่งขัน</span>
+              <span class="btn-line">ภาษาศาสตร์โอลิมปิกระดับชาติ ครั้งที่ 6</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div class="footer-left">
+          <div class="footer-brand">
+            <img class="footer-logo" src="assets/images/LOT_LOGO_Grey_Full.png" alt="LOT โลโก้" width="180" height="180" loading="lazy" />
+            <div class="footer-brand-text">
+              <p class="footer-name">Thailand Linguistics Olympiad (LOT)</p>
+              <p class="footer-tagline">การแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-block">
+            <h3 class="footer-heading">การแข่งขันภาษาศาสตร์โอลิมปิกระดับชาติ</h3>
+            <p class="footer-item">
+              <span class="icon-mail" aria-hidden="true"></span>
+              อีเมล : <a href="mailto:ling.olympiad.thailand@gmail.com">ling.olympiad.thailand@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="footer-block">
+            <h3 class="footer-heading">มูลนิธิ สอวน.</h3>
+            <p class="footer-item">
+              <span class="icon-mail" aria-hidden="true"></span>
+              อีเมล : <a href="mailto:ac.olympiads@posn.or.th">ac.olympiads@posn.or.th</a>
+            </p>
+            <br/>
+            <p class="footer-item">
+              <span class="icon-web" aria-hidden="true"></span>
+              เว็บไซต์ : <a href="https://www.posn.or.th" target="_blank" rel="noopener">www.posn.or.th</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Global behavior (sticky header, nav, reveal, timeline helpers) -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
