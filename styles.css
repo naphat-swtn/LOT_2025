@@ -256,3 +256,28 @@ body.has-fixed-header{ padding-top: var(--header-height, 76px); }
     justify-items: center;
   }
 }
+/* Mobile: กราฟ full-bleed ใหญ่ขึ้นอีก */
+@media (max-width: 600px) {
+  .history .container { padding-left: 0; padding-right: 0; }
+
+  .chart-wrap {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .chart-card { padding: 10px 8px; border-radius: 10px; }
+
+  /* ขยายเต็มจอ และเพิ่มสัดส่วนความสูงเข้าใกล้ 1:1 เพื่อให้แท่งโตขึ้นเยอะ */
+  .chart {
+    width: 100vw;            /* จากเดิม 94vw → 100vw */
+    max-width: 100vw;
+    height: clamp(520px, 115vw, 900px);  /* จาก 400–620px → สูงขึ้นอีก */
+    display: block;
+  }
+
+  /* ตัวอักษรใหญ่ขึ้นให้สมดุลกับกราฟที่โต */
+  .x-label, .y-label { font-size: 14px; }
+  .chart-title { font-size: 1.1rem; }
+  .chart-legend { gap: 18px; font-size: 0.95rem; }
+}
